@@ -49,7 +49,6 @@ class _ProductPreview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(isFullScreen);
     return Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       const _ShoeImage(),
       if (!isFullScreen)
