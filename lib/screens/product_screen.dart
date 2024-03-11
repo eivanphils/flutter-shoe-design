@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_shop_nike/screens/product_detail_screen.dart';
+import 'package:flutter_shop_nike/helpers/helpers.dart';
 import 'package:flutter_shop_nike/widgets/custom_button.dart';
 import 'package:flutter_shop_nike/widgets/widgets.dart';
 
@@ -9,6 +10,8 @@ class ProductScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    setStatusBarDark();
+    
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
@@ -21,7 +24,11 @@ class ProductScreen extends StatelessWidget {
                 child: SingleChildScrollView(
                     child: Column(
               children: [
-                Hero(tag: 'product-card', child: ProductImage(isFullScreen: false,)),
+                Hero(
+                    tag: 'product-card',
+                    child: ProductImage(
+                      isFullScreen: false,
+                    )),
                 ProductDescription(
                   title: 'Nike Air Max 720',
                   description:

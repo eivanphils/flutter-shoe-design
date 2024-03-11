@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:provider/provider.dart';
 
+import 'package:flutter_shop_nike/helpers/helpers.dart';
 import 'package:flutter_shop_nike/providers/product_provider.dart';
 import 'package:flutter_shop_nike/widgets/custom_button.dart';
 import 'package:flutter_shop_nike/widgets/widgets.dart';
@@ -12,6 +13,8 @@ class ProductDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    setStatusBarLight();
+
     return Scaffold(
       body: Column(
         children: [
@@ -29,7 +32,10 @@ class ProductDetailScreen extends StatelessWidget {
                   child: FloatingActionButton(
                       backgroundColor: Colors.transparent,
                       elevation: 0,
-                      onPressed: () => Navigator.pop(context),
+                      onPressed: () {
+                        setStatusBarDark();
+                        Navigator.pop(context);
+                      },
                       child: const Icon(
                         Icons.arrow_back_ios_new_rounded,
                         color: Colors.white,
