@@ -21,7 +21,7 @@ class ProductScreen extends StatelessWidget {
                 child: SingleChildScrollView(
                     child: Column(
               children: [
-                Hero(tag: 'product-card', child: ProductImage()),
+                Hero(tag: 'product-card', child: ProductImage(isFullScreen: false,)),
                 ProductDescription(
                   title: 'Nike Air Max 720',
                   description:

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:animate_do/animate_do.dart';
+import 'package:provider/provider.dart';
 
+import 'package:flutter_shop_nike/providers/product_provider.dart';
 import 'package:flutter_shop_nike/widgets/custom_button.dart';
 import 'package:flutter_shop_nike/widgets/widgets.dart';
 
@@ -116,12 +118,14 @@ class _Buttons extends StatelessWidget {
           children: [
             _CircleButton(
               color: Color(0xFF364D56),
+              asset: 'assets/images/negro.png',
               index: 1,
             ),
             Positioned(
               left: 30,
               child: _CircleButton(
                 color: Color(0xFFC6D642),
+                asset: 'assets/images/verde.png',
                 index: 2,
               ),
             ),
@@ -129,6 +133,7 @@ class _Buttons extends StatelessWidget {
               left: 60,
               child: _CircleButton(
                 color: Color(0xFFFFAD29),
+                asset: 'assets/images/amarillo.png',
                 index: 3,
               ),
             ),
@@ -136,6 +141,7 @@ class _Buttons extends StatelessWidget {
                 left: 90,
                 child: _CircleButton(
                   color: Color(0xFF2099F1),
+                  asset: 'assets/images/azul.png',
                   index: 4,
                 )),
           ],
@@ -165,17 +171,26 @@ class _Buttons extends StatelessWidget {
 class _CircleButton extends StatelessWidget {
   final Color color;
   final int index;
-  const _CircleButton({super.key, required this.color, required this.index});
+  final String asset;
+  const _CircleButton(
+      {super.key,
+      required this.color,
+      required this.index,
+      required this.asset});
 
   @override
   Widget build(BuildContext context) {
+    final productProvider = Provider.of<ProductProvider>(context);
     return FadeInLeft(
       delay: Duration(milliseconds: index * 100),
       duration: const Duration(milliseconds: 300),
-      child: Container(
-        width: 50,
-        height: 50,
-        decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+      child: GestureDetector(
+        onTap: () => productProvider.selectedShoe = asset,
+        child: Container(
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+        ),
       ),
     );
   }

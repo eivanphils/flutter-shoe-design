@@ -8,12 +8,10 @@ import 'package:flutter_shop_nike/providers/product_provider.dart';
 class ProductImage extends StatelessWidget {
   final bool isFullScreen;
 
-  const ProductImage({super.key, this.isFullScreen = false});
+  const ProductImage({super.key, required this.isFullScreen});
 
   @override
   Widget build(BuildContext context) {
-        print(isFullScreen);
-
     return GestureDetector(
       onTap: () {
         if (!isFullScreen) {
@@ -33,7 +31,9 @@ class ProductImage extends StatelessWidget {
           color: const Color(0xFFF8D468),
           borderRadius: BorderRadius.circular(40),
         ),
-        child: const _ProductPreview(),
+        child: _ProductPreview(
+          isFullScreen: isFullScreen,
+        ),
       ),
     );
   }
@@ -44,7 +44,7 @@ class _ProductPreview extends StatelessWidget {
 
   const _ProductPreview({
     super.key,
-    this.isFullScreen = false,
+    required this.isFullScreen,
   });
 
   @override
@@ -52,7 +52,7 @@ class _ProductPreview extends StatelessWidget {
     print(isFullScreen);
     return Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       const _ShoeImage(),
-      if (isFullScreen)
+      if (!isFullScreen)
         const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -77,6 +77,8 @@ class _ShoeImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final productProvider = Provider.of<ProductProvider>(context);
+
     return Stack(
       children: [
         Positioned(
@@ -95,7 +97,7 @@ class _ShoeImage extends StatelessWidget {
           ),
         ),
         Image.asset(
-          'assets/images/azul.png',
+          productProvider.selectedShoe,
           width: 250,
         ),
       ],
@@ -111,24 +113,36 @@ class _SizeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final productProvider = Provider.of<ProductProvider>(context);
 
-    return Container(
-      width: 45,
-      height: 45,
-      margin: const EdgeInsets.symmetric(horizontal: 5),
-      decoration: BoxDecoration(
-          boxShadow: const [
-            BoxShadow(
-                color: Color(0xFFF1A23A), offset: Offset(0, 5), blurRadius: 10),
-          ],
-          color: productProvider.selectedSize == number ? Colors.orangeAccent : Colors.white,
-          borderRadius: BorderRadius.circular(10)),
-      child: Center(
-          child: Text(
-        number.toString(),
-        style: TextStyle(
-            color: productProvider.selectedSize == number ? Colors.white : Colors.orangeAccent,
-            fontWeight: FontWeight.w700),
-      )),
+    return GestureDetector(
+      onTap: () {
+        productProvider.selectedSize = number;   
+      },
+      child: Container(
+        width: 45,
+        height: 45,
+        margin: const EdgeInsets.symmetric(horizontal: 5),
+        decoration: BoxDecoration(
+            boxShadow: const [
+              BoxShadow(
+                  color: Color(0xFFF1A23A),
+                  offset: Offset(0, 5),
+                  blurRadius: 10),
+            ],
+            color: productProvider.selectedSize == number
+                ? Colors.orangeAccent
+                : Colors.white,
+            borderRadius: BorderRadius.circular(10)),
+        child: Center(
+            child: Text(
+          number.toString(),
+          style: TextStyle(
+              fontSize: productProvider.selectedSize == number ? 14 : 12,
+              color: productProvider.selectedSize == number
+                  ? Colors.white
+                  : Colors.orangeAccent,
+              fontWeight: FontWeight.w700),
+        )),
+      ),
     );
   }
 }
