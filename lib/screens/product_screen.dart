@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shop_nike/widgets/custom_button.dart';
 
+import 'package:flutter_shop_nike/screens/product_detail_screen.dart';
+import 'package:flutter_shop_nike/widgets/custom_button.dart';
 import 'package:flutter_shop_nike/widgets/widgets.dart';
 
 class ProductScreen extends StatelessWidget {
@@ -20,7 +21,7 @@ class ProductScreen extends StatelessWidget {
                 child: SingleChildScrollView(
                     child: Column(
               children: [
-                ProductImage(),
+                Hero(tag: 'product-card', child: ProductImage()),
                 ProductDescription(
                   title: 'Nike Air Max 720',
                   description:
@@ -28,26 +29,32 @@ class ProductScreen extends StatelessWidget {
                 ),
               ],
             ))),
-            CustomButton(
-                backgroundColor: Colors.grey.withOpacity(0.20),
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                width: size.width * 0.90,
-                height: 80,
-                child: const Row(
-                  children: [
-                    Text(
-                      '\$ ',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      '180.0',
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                    Spacer(),
-                    _AddCartButton(),
-                  ],
-                ))
+            GestureDetector(
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProductDetailScreen())),
+              child: CustomButton(
+                  backgroundColor: Colors.grey.withOpacity(0.20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  width: size.width * 0.90,
+                  height: 80,
+                  child: const Row(
+                    children: [
+                      Text(
+                        '\$ ',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        '180.0',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
+                      Spacer(),
+                      _AddCartButton(),
+                    ],
+                  )),
+            )
           ],
         ),
       ),
