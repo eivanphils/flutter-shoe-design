@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:flutter_shop_nike/widgets/widgets.dart';
 
 class StoreCatalogScreen extends StatelessWidget {
@@ -59,41 +61,68 @@ class StoreCatalogScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              
+
               SizedBox(
                 width: double.infinity,
                 height: 300,
                 child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 30,
-                  itemBuilder: (context, index) {
-                    return const CardShoes();
-                  }
-                ),
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 30,
+                    itemBuilder: (context, index) {
+                      return const CardShoes();
+                    }),
               ),
 
-              
               SizedBox(
                 width: double.infinity,
                 height: 300,
                 child: ListView.builder(
-                  
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 10,
-                  itemBuilder: (context, index) {
-                    return const CardShoes();
-                  }
-                ),
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 10,
+                    itemBuilder: (context, index) {
+                      return const CardShoes();
+                    }),
               ),
 
               const SizedBox(
-                height: 40,
+                height: 100,
               ),
-              
             ],
           ),
         ),
       ),
+      floatingActionButton: const _FloatingButtons(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    );
+  }
+}
+
+class _FloatingButtons extends StatelessWidget {
+  const _FloatingButtons({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        IconButton(onPressed: () {}, icon: const Icon(Icons.home, color: Colors.black,)),
+        CircleButton(
+            radio: 70,
+            child: const Center(
+                child: FaIcon(
+              FontAwesomeIcons.magnifyingGlass,
+              color: Colors.white,
+            )),
+            onPress: () {}),
+        IconButton(
+            onPressed: () {},
+            icon: const FaIcon(
+              FontAwesomeIcons.heart,
+              color: Colors.black,
+            )),
+      ],
     );
   }
 }

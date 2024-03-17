@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 class CircleButton extends StatelessWidget {
   final Widget child;
   final VoidCallback onPress;
+  final double radio;
+
   const CircleButton({
     super.key,
     required this.child,
     required this.onPress,
+    this.radio = 100
   });
 
   @override
@@ -14,8 +17,8 @@ class CircleButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPress,
       child: Container(
-        width: 100,
-        height: 100,
+        width: radio,
+        height: radio,
         decoration:
             const BoxDecoration(shape: BoxShape.circle, color: Colors.black),
         child: child,
