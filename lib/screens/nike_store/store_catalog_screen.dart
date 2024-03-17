@@ -12,9 +12,8 @@ class StoreCatalogScreen extends StatelessWidget {
     return Scaffold(
       appBar: HeaderAppBar(
           title: Image.asset(
-            'assets/images/nike-grey.png',
-            width: 70,
-            color: Colors.red,
+            'assets/images/nike-red.png',
+            width: 80,
           ),
           scaffoldKey: scaffoldKey),
       drawer: const Menu(),

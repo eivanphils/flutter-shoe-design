@@ -29,49 +29,50 @@ class HomeStoreScreen extends StatelessWidget {
 }
 
 class _Body extends StatelessWidget {
-  const _Body({
-    super.key,
-  });
+  const _Body();
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return SafeArea(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: size.height * 0.02,
-          ),
-          Image.asset(
-            'assets/images/nike-black.png',
-            width: 100,
-          ),
-          SizedBox(
-            height: size.height * 0.02,
-          ),
-          const Text(
-            'Nike',
-            style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(
-            height: size.height * 0.02,
-          ),
-          Text(
-            'Throwback future'.toUpperCase(),
-            style: const TextStyle(fontSize: 20, letterSpacing: 5),
-          ),
-          SizedBox(
-            height: size.height * 0.18,
-          ),
-          Transform.rotate(
-            angle: -0.7,
-            child: Image.asset(
-              'assets/images/store/Nike-Air-Max-1-Premium/cover.png',
-              width: size.width * 0.85,
+      child: SizedBox(
+        width: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: size.height * 0.02,
             ),
-          ),
-        ],
+            Image.asset(
+              'assets/images/nike-black.png',
+              width: 100,
+            ),
+            SizedBox(
+              height: size.height * 0.02,
+            ),
+            const Text(
+              'Nike',
+              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: size.height * 0.02,
+            ),
+            Text(
+              'Throwback future'.toUpperCase(),
+              style: const TextStyle(fontSize: 20, letterSpacing: 5),
+            ),
+            SizedBox(
+              height: size.height * 0.18,
+            ),
+            Transform.rotate(
+              angle: -0.7,
+              child: Image.asset(
+                'assets/images/store/Nike-Air-Max-1-Premium/cover.png',
+                width: size.width * 0.85,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -179,7 +180,7 @@ class _PaintLines extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    throw true;
+    return true;
   }
 }
 
