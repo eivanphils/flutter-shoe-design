@@ -20,7 +20,7 @@ class HeaderAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: title,
       actions: [
         Container(
-            margin: const EdgeInsets.only(right: 20),
+            margin: const EdgeInsets.only(right: 10),
             child: IconButton(
                 onPressed: () {},
                 icon: const _BorderIcon(
