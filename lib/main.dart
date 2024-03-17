@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shop_nike/providers/product_provider.dart';
+
+import 'package:provider/provider.dart';
 
 import 'package:flutter_shop_nike/screens/screens.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_shop_nike/providers/product_provider.dart';
 
 void main() => runApp(MultiProvider(
   providers: [ChangeNotifierProvider(create: (_) => ProductProvider())],
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: ProductScreen(),
+      home: StoreCatalogScreen(),
     );
   }
 }

@@ -80,11 +80,10 @@ class _Body extends StatelessWidget {
 
 class _Background extends StatelessWidget {
   final Widget child;
-  const _Background({super.key, required this.child});
+  const _Background({required this.child});
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Stack(
       children: [
         SizedBox(
@@ -95,44 +94,7 @@ class _Background extends StatelessWidget {
           ),
         ),
         child,
-
-// first line
-        Positioned(
-            left: 0,
-            top: size.height * 0.5,
-            child: Container(
-              width: 5,
-              height: 5,
-              color: Colors.red,
-            )),
-
-        Positioned(
-            right: 0,
-            top: size.height * 0.40,
-            child: Container(
-              width: 5,
-              height: 5,
-              color: Colors.blue,
-            )),
-
-        Positioned(
-            left: 0,
-            top: size.height * 0.62,
-            child: Container(
-              width: 5,
-              height: 5,
-              color: Colors.green,
-            )),
-
-        Positioned(
-            right: 0,
-            top: size.height * 0.50,
-            child: Container(
-              width: 5,
-              height: 5,
-              color: Colors.blue,
-            )),
-      ],
+     ],
     );
   }
 }
