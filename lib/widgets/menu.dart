@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/svg.dart';
 
-import 'package:flutter_shop_nike/screens/nike_store/store_catalog_screen.dart';
-import 'package:flutter_shop_nike/screens/product_screen.dart';
+import 'package:flutter_shop_nike/screens/screens.dart';
 
 class Menu extends StatelessWidget {
   const Menu({super.key});
@@ -34,7 +33,7 @@ class Menu extends StatelessWidget {
             ),
             ListTile(
               onTap: () => Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => const StoreCatalogScreen())),
+                  MaterialPageRoute(builder: (context) => const HomeStoreScreen())),
               title: const Text('Second Design'),
             )
           ],
