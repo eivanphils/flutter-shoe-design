@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_shop_nike/screens/product_detail_screen.dart';
+import 'package:flutter_shop_nike/screens/screens.dart';
 import 'package:flutter_shop_nike/helpers/helpers.dart';
-import 'package:flutter_shop_nike/widgets/custom_button.dart';
 import 'package:flutter_shop_nike/widgets/widgets.dart';
 
 class ProductScreen extends StatelessWidget {
@@ -11,15 +10,24 @@ class ProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     setStatusBarDark();
-    
+    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      key: scaffoldKey,
+      appBar: HeaderAppBar(
+          scaffoldKey: scaffoldKey,
+          title: const Text(
+            'For you',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+            ),
+          )),
+      drawer: const Menu(),
       body: SafeArea(
         child: Column(
           children: [
-            const HeaderAppBar(
-              title: 'For you',
-            ),
             const Expanded(
                 child: SingleChildScrollView(
                     child: Column(
