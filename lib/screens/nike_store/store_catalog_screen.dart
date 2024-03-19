@@ -37,9 +37,9 @@ class StoreCatalogScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Container(
+              const SizedBox(
                 height: 180,
-                color: Colors.red,
+                child: SliderShoes(),
               ),
               const SizedBox(
                 height: 30,
@@ -98,9 +98,7 @@ class StoreCatalogScreen extends StatelessWidget {
 }
 
 class _FloatingButtons extends StatelessWidget {
-  const _FloatingButtons({
-    super.key,
-  });
+  const _FloatingButtons();
 
   @override
   Widget build(BuildContext context) {

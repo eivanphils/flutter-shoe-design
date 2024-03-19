@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 
 import 'package:flutter_shop_nike/helpers/helpers.dart';
 import 'package:flutter_shop_nike/providers/product_provider.dart';
-import 'package:flutter_shop_nike/widgets/custom_button.dart';
 import 'package:flutter_shop_nike/widgets/widgets.dart';
 
 class ProductDetailScreen extends StatelessWidget {
@@ -88,7 +87,7 @@ class ProductDetailScreen extends StatelessWidget {
 }
 
 class _CartButton extends StatelessWidget {
-  const _CartButton({super.key});
+  const _CartButton();
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +108,7 @@ class _CartButton extends StatelessWidget {
 }
 
 class _Buttons extends StatelessWidget {
-  const _Buttons({super.key});
+  const _Buttons();
 
   @override
   Widget build(BuildContext context) {
@@ -179,8 +178,7 @@ class _CircleButton extends StatelessWidget {
   final int index;
   final String asset;
   const _CircleButton(
-      {super.key,
-      required this.color,
+      {required this.color,
       required this.index,
       required this.asset});
 
@@ -203,7 +201,7 @@ class _CircleButton extends StatelessWidget {
 }
 
 class _FooterButtons extends StatelessWidget {
-  const _FooterButtons({super.key});
+  const _FooterButtons();
 
   @override
   Widget build(BuildContext context) {
@@ -228,7 +226,6 @@ class _Button extends StatelessWidget {
   final IconData icon;
   final Color color;
   const _Button({
-    super.key,
     required this.icon,
     required this.color,
   });

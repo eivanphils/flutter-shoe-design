@@ -43,7 +43,6 @@ class _ProductPreview extends StatelessWidget {
   final bool isFullScreen;
 
   const _ProductPreview({
-    super.key,
     required this.isFullScreen,
   });
 
@@ -70,9 +69,7 @@ class _ProductPreview extends StatelessWidget {
 }
 
 class _ShoeImage extends StatelessWidget {
-  const _ShoeImage({
-    super.key,
-  });
+  const _ShoeImage();
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +103,7 @@ class _ShoeImage extends StatelessWidget {
 
 class _SizeCard extends StatelessWidget {
   final double number;
-  const _SizeCard({super.key, required this.number});
+  const _SizeCard({required this.number});
 
   @override
   Widget build(BuildContext context) {

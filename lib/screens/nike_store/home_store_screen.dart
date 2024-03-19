@@ -145,27 +145,3 @@ class _PaintLines extends CustomPainter {
     return true;
   }
 }
-
-class _DiagonalHeaderPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint();
-
-    // paint properties
-    paint.color = const Color(0xff615aab);
-    paint.style = PaintingStyle.fill;
-
-    final path = Path();
-    path.lineTo(0, size.height * 0.3);
-    path.lineTo(size.width, size.height * 0.26);
-    path.lineTo(size.width, 0);
-    path.lineTo(0, 0);
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return true;
-  }
-}

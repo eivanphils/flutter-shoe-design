@@ -37,7 +37,6 @@ class HeaderAppBar extends StatelessWidget implements PreferredSizeWidget {
 class _BorderIcon extends StatelessWidget {
   final Widget child;
   const _BorderIcon({
-    super.key,
     required this.child,
   });
 

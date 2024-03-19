@@ -78,7 +78,7 @@ class ProductScreen extends StatelessWidget {
 }
 
 class _AddCartButton extends StatelessWidget {
-  const _AddCartButton({super.key});
+  const _AddCartButton();
 
   @override
   Widget build(BuildContext context) {
