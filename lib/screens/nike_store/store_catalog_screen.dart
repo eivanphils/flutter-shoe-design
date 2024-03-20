@@ -64,7 +64,7 @@ class StoreCatalogScreen extends StatelessWidget {
 
               SizedBox(
                 width: double.infinity,
-                height: 300,
+                height: 350,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: 30,
@@ -75,7 +75,7 @@ class StoreCatalogScreen extends StatelessWidget {
 
               SizedBox(
                 width: double.infinity,
-                height: 300,
+                height: 350,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: 10,
