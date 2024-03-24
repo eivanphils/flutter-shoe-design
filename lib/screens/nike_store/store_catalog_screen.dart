@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'package:provider/provider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'package:flutter_shop_nike/providers/store_provider.dart';
+import 'package:flutter_shop_nike/models/shoe_info.dart';
 import 'package:flutter_shop_nike/widgets/widgets.dart';
 
 class StoreCatalogScreen extends StatelessWidget {
@@ -10,6 +13,11 @@ class StoreCatalogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+    List<ShoeInfo> storeProducts =
+        Provider.of<StoreProvider>(context).storeProducts;
+
+    List<ShoeInfo> reversedProducts = storeProducts.reversed.toList();
 
     return Scaffold(
       appBar: HeaderAppBar(
@@ -67,9 +75,10 @@ class StoreCatalogScreen extends StatelessWidget {
                 height: 350,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: 30,
+                    itemCount: storeProducts.length,
                     itemBuilder: (context, index) {
-                      return const CardShoes();
+                      final ShoeInfo product = storeProducts[index];
+                      return CardShoes(product: product);
                     }),
               ),
 
@@ -78,9 +87,10 @@ class StoreCatalogScreen extends StatelessWidget {
                 height: 350,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: 10,
+                    itemCount: reversedProducts.length,
                     itemBuilder: (context, index) {
-                      return const CardShoes();
+                      final ShoeInfo product = reversedProducts[index];
+                      return CardShoes(product: product);
                     }),
               ),
 

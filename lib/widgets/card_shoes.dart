@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop_nike/models/shoe_info.dart';
 import 'package:flutter_shop_nike/widgets/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CardShoes extends StatelessWidget {
-  const CardShoes({super.key});
+  final ShoeInfo product;
+  const CardShoes({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -13,36 +15,34 @@ class CardShoes extends StatelessWidget {
       decoration: BoxDecoration(
           color: const Color(0xFFD9F8FB),
           borderRadius: BorderRadius.circular(10)),
-      child: const Stack(
+      child: Stack(
         children: [
-          Positioned(
-            left: 10,
-            top: 10,
-            child: _Title()),
-
-          Positioned(
-            left: 10,
-            top: 50,
-            child: _Colors()),
-
+          Positioned(left: 10, top: 10, child: _Title(product.name)),
+          Positioned(left: 10, top: 100, child: _Colors()),
           Positioned.fill(
             child: _ShoeImage(),
           ),
-
           Positioned(
-            left: 10,
-            bottom: 30,
-            child: Text('\$159', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),)),
+              left: 10,
+              bottom: 30,
+              child: Text(
+                '\$159',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              )),
           Positioned(
-            left: 10,
-            bottom: 10,
-            child: Text('Price', style: TextStyle(fontSize: 18 ,color: Colors.grey),)),
+              left: 10,
+              bottom: 10,
+              child: Text(
+                'Price',
+                style: TextStyle(fontSize: 18, color: Colors.grey),
+              )),
           Positioned(
-            right: 20,
-            bottom: 20,
-            child: ButtonOutline(child: FaIcon(FontAwesomeIcons.arrowRight,))),
-
-
+              right: 20,
+              bottom: 20,
+              child: ButtonOutline(
+                  child: FaIcon(
+                FontAwesomeIcons.arrowRight,
+              ))),
         ],
       ),
     );
@@ -70,14 +70,18 @@ class _ShoeImage extends StatelessWidget {
 }
 
 class _Title extends StatelessWidget {
-  const _Title();
+  final String title;
+  const _Title(this.title);
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      'Nike Waffle',
-      maxLines: 2,
-      style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+    return SizedBox(
+      width: 190,
+      child: Text(
+        title,
+        maxLines: 2,
+        style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+      ),
     );
   }
 }
@@ -87,21 +91,21 @@ class _Colors extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return const Column(
       children: [
         CircleAvatar(
           backgroundColor: Colors.red,
           radius: 8,
         ),
         SizedBox(
-          width: 10,
+          height: 10,
         ),
         CircleAvatar(
           backgroundColor: Colors.blue,
           radius: 8,
         ),
         SizedBox(
-          width: 10,
+          height: 10,
         ),
         CircleAvatar(
           backgroundColor: Colors.black,
