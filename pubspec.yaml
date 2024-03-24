@@ -67,21 +67,27 @@ flutter:
     - assets/data.json
     - assets/images/
     - assets/images/store/
-    - assets/images/store/Air-Jordan-1-Element/
-    - assets/images/store/Jordan-Max-Aura-5/
-    - assets/images/store/Jordan-Spizike-Low-Chinese-New-Year/
-    - assets/images/store/Jordan-Stay-Loyal-2/
-    - assets/images/store/Jumpman-MVP/
-    - assets/images/store/Nike-Air-Huarache-Runner/
+    - assets/images/store/Jordan-Max-Aura-5/yellow/
+    - assets/images/store/Air-Jordan-1-Element/purple/
+    - assets/images/store/Jordan-Spizike-Low-Chinese-New-Year/white/
+    - assets/images/store/Jordan-Stay-Loyal-2/black/
+    - assets/images/store/Jordan-Stay-Loyal-2/white/
+    - assets/images/store/Jumpman-MVP/red/
+    - assets/images/store/Jumpman-MVP/yellow/
+    - assets/images/store/Nike-Air-Huarache-Runner/burgundy/
     - assets/images/store/Nike-Air-Max-1-Premium/
-    - assets/images/store/Nike-Air-Max-1-SE/
-    - assets/images/store/Nike-Air-Max-90/
-    - assets/images/store/Nike-Air-Max-Excee/
-    - assets/images/store/Nike-Air-Max-Pulse/
-    - assets/images/store/Nike-Elevate-3/
-    - assets/images/store/Nike-SB-Dunk-Low-Pro-Premium/
-    - assets/images/store/Nike-SB-Zoom-Blazer-Mid-Premium/
-    - assets/images/store/Nike-SB-Zoom-Janoski-OG/
+    - assets/images/store/Nike-Air-Max-1-Premium/veige/
+    - assets/images/store/Nike-Air-Max-1-SE/pink/
+    - assets/images/store/Nike-Air-Max-90/green/
+    - assets/images/store/Nike-Air-Max-Excee/silver/
+    - assets/images/store/Nike-Air-Max-Pulse/black/
+    - assets/images/store/Nike-Air-Max-Pulse/grey/
+    - assets/images/store/Nike-Air-Max-Pulse/veige/
+    - assets/images/store/Nike-Air-Max-Pulse/white/
+    - assets/images/store/Nike-Elevate-3/silver/
+    - assets/images/store/Nike-SB-Dunk-Low-Pro-Premium/orange/
+    - assets/images/store/Nike-SB-Zoom-Blazer-Mid-Premium/red/
+    - assets/images/store/Nike-SB-Zoom-Janoski-OG/pink/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
