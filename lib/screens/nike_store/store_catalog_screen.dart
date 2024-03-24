@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop_nike/providers/store_provider.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:flutter_shop_nike/widgets/widgets.dart';
+import 'package:provider/provider.dart';
 
 class StoreCatalogScreen extends StatelessWidget {
   const StoreCatalogScreen({Key? key}) : super(key: key);
@@ -10,6 +12,7 @@ class StoreCatalogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+    final StoreProvider storeProvider = StoreProvider();
 
     return Scaffold(
       appBar: HeaderAppBar(
@@ -105,7 +108,12 @@ class _FloatingButtons extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        IconButton(onPressed: () {}, icon: const Icon(Icons.home, color: Colors.black,)),
+        IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.home,
+              color: Colors.black,
+            )),
         CircleButton(
             radio: 70,
             child: const Center(

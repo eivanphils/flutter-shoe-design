@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop_nike/providers/store_provider.dart';
 
 import 'package:provider/provider.dart';
 
@@ -6,7 +7,10 @@ import 'package:flutter_shop_nike/screens/screens.dart';
 import 'package:flutter_shop_nike/providers/product_provider.dart';
 
 void main() => runApp(MultiProvider(
-  providers: [ChangeNotifierProvider(create: (_) => ProductProvider())],
+  providers: [
+    ChangeNotifierProvider(create: (_) => ProductProvider()),
+    ChangeNotifierProvider(create: (_) => StoreProvider())
+  ],
   child: const MyApp()));
 
 class MyApp extends StatelessWidget {
