@@ -1,0 +1,387 @@
+{
+   "items": [
+    {
+        "name": "Air Jordan 1 Element",
+        "slug": "Air-Jordan-1-Element",
+        "colors": [
+            {
+                "color": "0xFF352B3B",
+                "colorName": "purple",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Jordan Max Aura 5",
+        "slug": "Jordan-Max-Aura-5",
+        "colors": [
+            {
+                "color": "0xFFDB8C0F",
+                "colorName": "yellow",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp"
+                ]
+            },
+            {
+                "color": "0xFFFFFFFF",
+                "colorName": "white",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp"
+                ]
+            },
+            {
+                "color": "0xFF000000",
+                "colorName": "black",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp"
+                ]
+            },
+            {
+                "color": "0xFFBA0218",
+                "colorName": "red",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Jordan Spizike Low Chinese New Year",
+        "slug": "Jordan-Spizike-Low-Chinese-New-Year",
+        "colors": [
+            {
+                "color": "0xFFFFFFFF",
+                "colorName": "white",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Jordan Stay Loyal 2",
+        "slug": "Jordan-Stay-Loyal-2",
+        "colors": [
+            {
+                "color": "0xFFFFFFFF",
+                "colorName": "white",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            },
+            {
+                "color": "0xFF000000",
+                "colorName": "black",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Jumpman MVP",
+        "slug": "Jumpman-MVP",
+        "colors": [
+            {
+                "color": "0xFFEDAA00",
+                "colorName": "yellow",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            },
+            {
+                "color": "0xFFBF0114",
+                "colorName": "red",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nike Air Huarache Runner",
+        "slug": "Nike-Air-Huarache-Runner",
+        "colors": [
+            {
+                "color": "0xFF50212C",
+                "colorName": "burgundy",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nike Air Max 1 Premium",
+        "slug": "Nike-Air-Max-1-Premium",
+        "colors": [
+            {
+                "color": "0xFFE6D9D2",
+                "colorName": "veige",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nike Air Max 1 SE",
+        "slug": "Nike-Air-Max-1-SE",
+        "colors": [
+            {
+                "color": "0xFFFE98CB",
+                "colorName": "pink",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nike Air Max 90",
+        "slug": "Nike-Air-Max-90",
+        "colors": [
+            {
+                "color": "0xFF00B069",
+                "colorName": "green",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nike Air Max Excee",
+        "slug": "Nike-Air-Max-Excee",
+        "colors": [
+            {
+                "color": "0xFFA69F98",
+                "colorName": "silver",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nike Air Max Pulse",
+        "slug": "Nike-Air-Max-Pulse",
+        "colors": [
+            {
+                "color": "0xFFB6AB80",
+                "colorName": "veige",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            },
+            {
+                "color": "0xFFFFFFFF",
+                "colorName": "white",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            },
+            {
+                "color": "0xFF000000",
+                "colorName": "black",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            },
+            {
+                "color": "0xFF4D5354",
+                "colorName": "grey",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nike Elevate 3",
+        "slug": "Nike-Elevate-3",
+        "colors": [
+            {
+                "color": "0xFF5E5E6D",
+                "colorName": "silver",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nike SB Dunk Low Pro Premium",
+        "slug": "Nike-SB-Dunk-Low-Pro-Premium",
+        "colors": [
+            {
+                "color": "0xFFA34A25",
+                "colorName": "orange",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp",
+                    "6.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nike SB Zoom Blazer Mid Premium",
+        "slug": "Nike-SB-Zoom-Blazer-Mid-Premium",
+        "colors": [
+            {
+                "color": "0xFFC73F50",
+                "colorName": "red",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nike SB Zoom Janoski OG",
+        "slug": "Nike-SB-Zoom-Janoski-OG",
+        "colors": [
+            {
+                "color": "0xFFFAC1CF",
+                "colorName": "pink",
+                "images": [
+                    "cover.webp",
+                    "1.webp",
+                    "2.webp",
+                    "3.webp",
+                    "4.webp",
+                    "5.webp"
+                ]
+            }
+        ]
+    }
+   ] 
+}
+
