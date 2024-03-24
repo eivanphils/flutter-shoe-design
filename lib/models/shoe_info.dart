@@ -33,7 +33,7 @@ class ShoeInfo {
 }
 
 class ColorInfo {
-    String color;
+    int color;
     String colorName;
     List<String> images;
 
@@ -44,7 +44,7 @@ class ColorInfo {
     });
 
     factory ColorInfo.fromJson(Map<String, dynamic> json) => ColorInfo(
-        color: json["color"],
+        color: int.tryParse(json["color"]) ?? 0,
         colorName: json["colorName"],
         images: List<String>.from(json["images"].map((x) => x)),
     );

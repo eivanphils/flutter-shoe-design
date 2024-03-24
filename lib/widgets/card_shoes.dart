@@ -18,25 +18,25 @@ class CardShoes extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(left: 10, top: 10, child: _Title(product.name)),
-          Positioned(left: 10, top: 100, child: _Colors()),
+          Positioned(left: 10, top: 100, child: _Colors(product.colors)),
           Positioned.fill(
-            child: _ShoeImage(),
+            child: _ShoeImage(product: product,),
           ),
-          Positioned(
+          const Positioned(
               left: 10,
               bottom: 30,
               child: Text(
                 '\$159',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               )),
-          Positioned(
+          const Positioned(
               left: 10,
               bottom: 10,
               child: Text(
                 'Price',
                 style: TextStyle(fontSize: 18, color: Colors.grey),
               )),
-          Positioned(
+          const Positioned(
               right: 20,
               bottom: 20,
               child: ButtonOutline(
@@ -50,18 +50,22 @@ class CardShoes extends StatelessWidget {
 }
 
 class _ShoeImage extends StatelessWidget {
+  final ShoeInfo product;
   const _ShoeImage({
-    super.key,
+    super.key, required this.product,
   });
 
   @override
   Widget build(BuildContext context) {
+
+    final String cover =
+        'assets/images/store/${product.slug}/${product.colors[0].colorName}/${product.colors[0].images[0]}';
     return Align(
       alignment: Alignment.center,
       child: Transform.rotate(
         angle: -0.7,
         child: Image.asset(
-          'assets/images/store/Nike-Air-Max-1-Premium/cover.png',
+          cover,
           width: 180,
         ),
       ),
@@ -87,31 +91,28 @@ class _Title extends StatelessWidget {
 }
 
 class _Colors extends StatelessWidget {
-  const _Colors();
+  final List<ColorInfo> colors;
+  const _Colors(this.colors);
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        CircleAvatar(
-          backgroundColor: Colors.red,
-          radius: 8,
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        CircleAvatar(
-          backgroundColor: Colors.blue,
-          radius: 8,
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        CircleAvatar(
-          backgroundColor: Colors.black,
-          radius: 8,
-        ),
-      ],
+    return SizedBox(
+      width: 30,
+      height: 120,
+      child: ListView.builder(
+          itemCount: colors.length,
+          itemBuilder: (context, index) {
+            final ColorInfo color = colors[index];
+            return Column(children: [
+              CircleAvatar(
+                backgroundColor: Color(color.color),
+                radius: 8,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+            ]);
+          }),
     );
   }
 }
