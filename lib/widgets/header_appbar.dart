@@ -17,6 +17,7 @@ class HeaderAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: FaIcon(FontAwesomeIcons.bars),
         ),
       ),
+      centerTitle: true,
       title: title,
       actions: [
         Container(
