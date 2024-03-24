@@ -6,12 +6,10 @@ import 'package:provider/provider.dart';
 import 'package:flutter_shop_nike/screens/screens.dart';
 import 'package:flutter_shop_nike/providers/product_provider.dart';
 
-void main() => runApp(MultiProvider(
-  providers: [
-    ChangeNotifierProvider(create: (_) => ProductProvider()),
-    ChangeNotifierProvider(create: (_) => StoreProvider())
-  ],
-  child: const MyApp()));
+void main() => runApp(MultiProvider(providers: [
+      ChangeNotifierProvider(create: (_) => ProductProvider()),
+      ChangeNotifierProvider(create: (_) => StoreProvider(), lazy: false,)
+    ], child: const MyApp()));
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

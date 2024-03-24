@@ -6,8 +6,8 @@ import 'package:flutter_shop_nike/models/shoes_data.dart';
 
 class StoreProvider extends ChangeNotifier {
   double _selectedSize = 9.0;
-  late ShoesData storeProducts;
-  late ShoeInfo _selectedShoe;
+  List<ShoeInfo> storeProducts = [];
+  ShoeInfo _selectedShoe = ShoeInfo(name: '', slug: '', colors: []);
 
   set selectedSize(double size) {
     _selectedSize = size;
@@ -32,10 +32,8 @@ class StoreProvider extends ChangeNotifier {
     final String response =
         await rootBundle.loadString('assets/data.json');
 
-    print(response);
-    storeProducts = shoesDataFromJson(response);
+    storeProducts = shoesDataFromJson(response).items;
 
-    print(storeProducts.items[0].name);
     notifyListeners();
   }
 }
