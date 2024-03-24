@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:flutter_shop_nike/models/shoe_info.dart';
+import 'package:flutter_shop_nike/widgets/widgets.dart';
 import 'package:flutter_shop_nike/providers/store_provider.dart';
 
 class SliderShoes extends StatelessWidget {
@@ -68,9 +69,9 @@ class _Slide extends StatelessWidget {
         Positioned(
           right: 20,
           bottom: 0,
-          child: Transform.rotate(
-            angle: -0.7,
-            child: Image.asset(cover, width: 200),
+          child: ShoeImage(
+            image: cover,
+            width: 200,
           ),
         )
       ],

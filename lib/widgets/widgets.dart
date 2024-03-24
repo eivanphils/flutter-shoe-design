@@ -1,3 +1,4 @@
+export 'package:flutter_shop_nike/widgets/shoe_image.dart';
 export 'package:flutter_shop_nike/widgets/button_outline.dart';
 export 'package:flutter_shop_nike/widgets/slider_shoes.dart';
 export 'package:flutter_shop_nike/widgets/card_shoes.dart';
