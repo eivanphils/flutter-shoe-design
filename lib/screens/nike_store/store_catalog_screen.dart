@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shop_nike/providers/store_provider.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'package:flutter_shop_nike/widgets/widgets.dart';
 import 'package:provider/provider.dart';
+
+import 'package:flutter_shop_nike/providers/store_provider.dart';
+import 'package:flutter_shop_nike/widgets/widgets.dart';
 
 class StoreCatalogScreen extends StatelessWidget {
   const StoreCatalogScreen({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class StoreCatalogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-    final StoreProvider storeProvider = StoreProvider();
+    final StoreProvider storeProvider = Provider.of<StoreProvider>(context);
 
     return Scaffold(
       appBar: HeaderAppBar(
