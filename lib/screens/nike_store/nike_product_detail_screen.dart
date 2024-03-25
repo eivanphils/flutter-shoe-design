@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
+
 import 'package:flutter_shop_nike/models/shoe_info.dart';
+import 'package:flutter_shop_nike/providers/store_provider.dart';
 import 'package:flutter_shop_nike/widgets/widgets.dart';
 
 class NikeProductDetailScreen extends StatelessWidget {
@@ -11,6 +15,8 @@ class NikeProductDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Se selecciona el color pro defecto
+
     final String cover =
         'assets/images/store/${product.slug}/${product.colors[0].colorName}/${product.colors[0].images[0]}';
 
@@ -29,7 +35,12 @@ class NikeProductDetailScreen extends StatelessWidget {
             ),
             _Title(product.name),
             _Subtitle(product.slug),
-            _Cover(),
+            const SizedBox(
+              height: 20,
+            ),
+            _Cover(
+              product: product,
+            ),
             Center(
               child: ShoeImage(
                 image: cover,
@@ -83,19 +94,48 @@ class _Subtitle extends StatelessWidget {
 }
 
 class _Cover extends StatelessWidget {
-  const _Cover();
+  final ShoeInfo product;
+
+  const _Cover({required this.product});
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
+    final String cover =
+        'assets/images/store/${product.slug}/${product.colors[0].colorName}/${product.colors[0].images[0]}';
+
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20),
       width: double.infinity,
       height: size.height * 0.70,
-      color: Colors.red[200],
       child: Stack(
-        children: [_Background()],
+        children: [
+          const _Background(),
+          const Positioned(right: 0, child: _FavoriteButton()),
+          const Positioned(child: _SizeSelector()),
+          Positioned.fill(
+            left: -80,
+            top: -60,
+            child: ShoeImage(
+              image: cover,
+              width: size.width * 0.90,
+            ),
+          ),
+          Positioned(
+              right: 0,
+              bottom: 0,
+              child: _ColorDot(
+                product: product,
+              )),
+
+          Positioned(
+            left: 0,
+            bottom: 0,
+            child: _PriceText())
+
+          
+        ],
       ),
     );
   }
@@ -130,7 +170,20 @@ class _FavoriteButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text(
+          'Fav',
+          style: TextStyle(fontSize: 16),
+        ),
+        const SizedBox(
+          height: 5,
+        ),
+        ButtonOutline(
+            child: const FaIcon(FontAwesomeIcons.heart), onPressed: () {})
+      ],
+    );
   }
 }
 
@@ -139,16 +192,138 @@ class _SizeSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Column(
+      children: [
+        Text(
+          'Size',
+          style: TextStyle(fontSize: 16),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        _SizeSelectorButton(
+          size: 9,
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        _SizeSelectorButton(
+          size: 9.5,
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        _SizeSelectorButton(
+          size: 10,
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        _SizeSelectorButton(
+          size: 10.5,
+        ),
+      ],
+    );
+  }
+
+  BoxDecoration _decoration() {
+    return BoxDecoration(
+        border: Border.all(width: 1, color: Colors.grey[350]!),
+        borderRadius: BorderRadius.circular(10));
+  }
+}
+
+class _SizeSelectorButton extends StatelessWidget {
+  final double size;
+
+  const _SizeSelectorButton({required this.size});
+
+  @override
+  Widget build(BuildContext context) {
+    final StoreProvider storeProvider = Provider.of<StoreProvider>(context);
+    final bool isSelected = storeProvider.selectedSize == size;
+
+    return InkWell(
+      onTap: () => storeProvider.selectedSize = size,
+      borderRadius: BorderRadius.circular(10),
+      child: Container(
+        width: 45,
+        height: 45,
+        decoration: _decoration(isSelected),
+        child: Center(
+            child: Text(
+          size.toString(),
+          style: TextStyle(
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.w300,
+              color: isSelected ? Colors.white : Colors.black),
+        )),
+      ),
+    );
+  }
+
+  BoxDecoration _decoration(bool isSelected) {
+    return BoxDecoration(
+        color: isSelected ? Colors.black : Colors.white,
+        border: Border.all(
+            width: 1, color: isSelected ? Colors.black : Colors.grey[350]!),
+        borderRadius: BorderRadius.circular(10));
   }
 }
 
 class _ColorDot extends StatelessWidget {
-  const _ColorDot();
+  final ShoeInfo product;
+
+  const _ColorDot({required this.product});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SizedBox(
+      width: 45,
+      height: (45 * product.colors.length).toDouble() +
+          (10 * product.colors.length).toDouble(),
+      child: ListView.builder(
+          itemCount: product.colors.length,
+          itemBuilder: (context, index) {
+            final ColorInfo color = product.colors[index];
+
+            return Container(
+              margin: const EdgeInsets.only(bottom: 10),
+              width: double.infinity,
+              height: 45,
+              decoration: BoxDecoration(
+                  color: Color(color.color),
+                  border: Border.all(width: 1, color: Colors.grey[350]!),
+                  boxShadow: const [
+                    BoxShadow(
+                        color: Color.fromRGBO(0, 0, 0, 0.1),
+                        blurRadius: 15,
+                        spreadRadius: -1,
+                        offset: Offset(-3, 0))
+                  ],
+                  borderRadius: BorderRadius.circular(10)),
+            );
+          }),
+    );
+  }
+}
+
+class _PriceText extends StatelessWidget {
+  const _PriceText();
+
+  @override
+  Widget build(BuildContext context) {
+    return const Column(
+      children: [
+        Text(
+          '\$159',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+        ),
+        Text(
+          'Price',
+          style: TextStyle(fontSize: 16),
+        )
+      ],
+    );
   }
 }
 

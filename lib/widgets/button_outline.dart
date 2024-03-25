@@ -15,7 +15,7 @@ class ButtonOutline extends StatelessWidget {
         height: 40,
         decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(10),
             border: Border.all(width: 1, color: Colors.grey[350]!)),
         child: Center(child: child),
       ),

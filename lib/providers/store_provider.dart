@@ -7,7 +7,7 @@ import 'package:flutter_shop_nike/models/shoes_data.dart';
 class StoreProvider extends ChangeNotifier {
   double _selectedSize = 9.0;
   List<ShoeInfo> storeProducts = [];
-  ShoeInfo _selectedShoe = ShoeInfo(name: '', slug: '', colors: []);
+  late ColorInfo _selectedColor;
 
   set selectedSize(double size) {
     _selectedSize = size;
@@ -16,12 +16,12 @@ class StoreProvider extends ChangeNotifier {
 
   double get selectedSize => _selectedSize;
 
-  set selectedShow(ShoeInfo shoe) {
-    _selectedShoe = shoe;
+  set selectedColor(ColorInfo color) {
+    _selectedColor = color;
     notifyListeners();
   }
 
-  ShoeInfo get selectedShoe => _selectedShoe;
+  ColorInfo get selectedColor => _selectedColor;
 
   StoreProvider() {
     loadData();
