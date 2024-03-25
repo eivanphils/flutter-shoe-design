@@ -13,7 +13,7 @@ class CardShoes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String cover =
-        'assets/images/store/${product.slug}/${product.colors[0].colorName}/${product.colors[0].images[0]}';
+        'assets/images/store/${product.slug}/${product.colors[0].colorName}/cover.webp';
 
     return Container(
       margin: const EdgeInsets.only(right: 20, bottom: 20),

@@ -8,7 +8,6 @@
                 "color": "0xFF352B3B",
                 "colorName": "purple",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -27,7 +26,6 @@
                 "color": "0xFFDB8C0F",
                 "colorName": "yellow",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -39,7 +37,6 @@
                 "color": "0xFFFFFFFF",
                 "colorName": "white",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -51,7 +48,6 @@
                 "color": "0xFF000000",
                 "colorName": "black",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -63,7 +59,6 @@
                 "color": "0xFFBA0218",
                 "colorName": "red",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -81,7 +76,6 @@
                 "color": "0xFFFFFFFF",
                 "colorName": "white",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -99,7 +93,6 @@
                 "color": "0xFFFFFFFF",
                 "colorName": "white",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -112,7 +105,6 @@
                 "color": "0xFF000000",
                 "colorName": "black",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -131,7 +123,6 @@
                 "color": "0xFFEDAA00",
                 "colorName": "yellow",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -144,7 +135,6 @@
                 "color": "0xFFBF0114",
                 "colorName": "red",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -163,7 +153,6 @@
                 "color": "0xFF50212C",
                 "colorName": "burgundy",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -182,7 +171,6 @@
                 "color": "0xFFE6D9D2",
                 "colorName": "veige",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -201,7 +189,6 @@
                 "color": "0xFFFE98CB",
                 "colorName": "pink",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -220,7 +207,6 @@
                 "color": "0xFF00B069",
                 "colorName": "green",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -239,7 +225,6 @@
                 "color": "0xFFA69F98",
                 "colorName": "silver",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -258,7 +243,6 @@
                 "color": "0xFFB6AB80",
                 "colorName": "veige",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -271,7 +255,6 @@
                 "color": "0xFFFFFFFF",
                 "colorName": "white",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -284,7 +267,6 @@
                 "color": "0xFF000000",
                 "colorName": "black",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -297,7 +279,6 @@
                 "color": "0xFF4D5354",
                 "colorName": "grey",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -316,7 +297,6 @@
                 "color": "0xFF5E5E6D",
                 "colorName": "silver",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -335,7 +315,6 @@
                 "color": "0xFFA34A25",
                 "colorName": "orange",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -354,7 +333,6 @@
                 "color": "0xFFC73F50",
                 "colorName": "red",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",
@@ -372,7 +350,6 @@
                 "color": "0xFFFAC1CF",
                 "colorName": "pink",
                 "images": [
-                    "cover.webp",
                     "1.webp",
                     "2.webp",
                     "3.webp",

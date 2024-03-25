@@ -57,6 +57,10 @@ class NikeProductDetailScreen extends StatelessWidget {
               product: product,
             ),
 
+            const SizedBox(
+              height: 50,
+            ),
+
             ...images
           ],
         ),
@@ -102,7 +106,7 @@ class _Cover extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     final String cover =
-        'assets/images/store/${product.slug}/${product.colors[0].colorName}/${product.colors[0].images[0]}';
+        'assets/images/store/${product.slug}/${product.colors[0].colorName}/cover.webp';
 
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20),
