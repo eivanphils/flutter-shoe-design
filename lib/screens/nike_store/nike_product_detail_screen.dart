@@ -129,12 +129,16 @@ class _Cover extends StatelessWidget {
                 product: product,
               )),
 
-          Positioned(
+          const Positioned(
             left: 0,
             bottom: 0,
-            child: _PriceText())
+            child: _PriceText()),
 
-          
+          const Positioned.fill(
+            bottom: 0,
+            child: Align(
+              alignment: Alignment.bottomCenter,
+               child: _SwipeButton()))
         ],
       ),
     );
@@ -226,11 +230,6 @@ class _SizeSelector extends StatelessWidget {
     );
   }
 
-  BoxDecoration _decoration() {
-    return BoxDecoration(
-        border: Border.all(width: 1, color: Colors.grey[350]!),
-        borderRadius: BorderRadius.circular(10));
-  }
 }
 
 class _SizeSelectorButton extends StatelessWidget {
@@ -332,6 +331,31 @@ class _SwipeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      width: 60,
+      height: 100,
+      decoration: BoxDecoration(
+        color: Colors.black,
+        borderRadius: BorderRadius.circular(30)
+      ),
+      child: Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.only(top: 10),
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.grey[850]
+            ),
+            child: const Center(child: FaIcon(FontAwesomeIcons.bagShopping, color: Colors.white, size: 18,)),
+          ),
+
+          FaIcon(FontAwesomeIcons.chevronDown, size: 13, color: Colors.white.withOpacity(0.5),),
+          FaIcon(FontAwesomeIcons.chevronDown, size: 13, color: Colors.white.withOpacity(0.8),),
+          const FaIcon(FontAwesomeIcons.chevronDown, size: 13, color: Colors.white,),
+        ],
+      ),
+    );
   }
 }
