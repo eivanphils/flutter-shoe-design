@@ -36,7 +36,7 @@ class _Slide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String cover =
-        'assets/images/store/${product.slug}/${product.colors[0].colorName}/${product.colors[0].images[0]}';
+        'assets/images/store/${product.slug}/${product.colors[0].colorName}/cover.webp';
 
     return Stack(
       children: [

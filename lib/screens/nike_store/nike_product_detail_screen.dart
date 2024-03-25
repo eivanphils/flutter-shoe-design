@@ -17,8 +17,23 @@ class NikeProductDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // Se selecciona el color pro defecto
 
+    final String baseUrl =
+        'assets/images/store/${product.slug}/${product.colors[0].colorName}';
+
     final String cover =
-        'assets/images/store/${product.slug}/${product.colors[0].colorName}/${product.colors[0].images[0]}';
+        'assets/images/store/${product.slug}/${product.colors[0].colorName}/cover.webp';
+
+    // debo saber cual es el color selecionado para mostrar sus imagenes
+    List<Widget> images = product.colors[0].images
+        .map(
+          (item) => Center(
+            child: Image.asset(
+              '$baseUrl/$item',
+              width: 500,
+            ),
+          ),
+        )
+        .toList();
 
     return Scaffold(
       appBar: AppBar(
@@ -41,24 +56,8 @@ class NikeProductDetailScreen extends StatelessWidget {
             _Cover(
               product: product,
             ),
-            Center(
-              child: ShoeImage(
-                image: cover,
-                width: 500,
-              ),
-            ),
-            Center(
-              child: ShoeImage(
-                image: cover,
-                width: 500,
-              ),
-            ),
-            Center(
-              child: ShoeImage(
-                image: cover,
-                width: 500,
-              ),
-            ),
+
+            ...images
           ],
         ),
       ),
@@ -128,17 +127,11 @@ class _Cover extends StatelessWidget {
               child: _ColorDot(
                 product: product,
               )),
-
-          const Positioned(
-            left: 0,
-            bottom: 0,
-            child: _PriceText()),
-
+          const Positioned(left: 0, bottom: 0, child: _PriceText()),
           const Positioned.fill(
-            bottom: 0,
-            child: Align(
-              alignment: Alignment.bottomCenter,
-               child: _SwipeButton()))
+              bottom: 0,
+              child: Align(
+                  alignment: Alignment.bottomCenter, child: _SwipeButton()))
         ],
       ),
     );
@@ -229,7 +222,6 @@ class _SizeSelector extends StatelessWidget {
       ],
     );
   }
-
 }
 
 class _SizeSelectorButton extends StatelessWidget {
@@ -335,25 +327,37 @@ class _SwipeButton extends StatelessWidget {
       width: 60,
       height: 100,
       decoration: BoxDecoration(
-        color: Colors.black,
-        borderRadius: BorderRadius.circular(30)
-      ),
+          color: Colors.black, borderRadius: BorderRadius.circular(30)),
       child: Column(
         children: [
           Container(
             margin: const EdgeInsets.only(top: 10),
             width: 40,
             height: 40,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.grey[850]
-            ),
-            child: const Center(child: FaIcon(FontAwesomeIcons.bagShopping, color: Colors.white, size: 18,)),
+            decoration:
+                BoxDecoration(shape: BoxShape.circle, color: Colors.grey[850]),
+            child: const Center(
+                child: FaIcon(
+              FontAwesomeIcons.bagShopping,
+              color: Colors.white,
+              size: 18,
+            )),
           ),
-
-          FaIcon(FontAwesomeIcons.chevronDown, size: 13, color: Colors.white.withOpacity(0.5),),
-          FaIcon(FontAwesomeIcons.chevronDown, size: 13, color: Colors.white.withOpacity(0.8),),
-          const FaIcon(FontAwesomeIcons.chevronDown, size: 13, color: Colors.white,),
+          FaIcon(
+            FontAwesomeIcons.chevronDown,
+            size: 13,
+            color: Colors.white.withOpacity(0.5),
+          ),
+          FaIcon(
+            FontAwesomeIcons.chevronDown,
+            size: 13,
+            color: Colors.white.withOpacity(0.8),
+          ),
+          const FaIcon(
+            FontAwesomeIcons.chevronDown,
+            size: 13,
+            color: Colors.white,
+          ),
         ],
       ),
     );
