@@ -85,7 +85,17 @@ Luego el directorio lib
 <img src="https://github.com/eivanphils/flutter-shoe-design/blob/master/assets/screenshoots/06.png" width="200">   
 
 
-### Detalle producto 2:
 
 <img src="https://github.com/eivanphils/flutter-shoe-design/blob/master/assets/screenshoots/07.png" width="200">   
+
+
+
+<img src="https://github.com/eivanphils/flutter-shoe-design/blob/master/assets/screenshoots/08.png" width="200">   
+
+
+
+<img src="https://github.com/eivanphils/flutter-shoe-design/blob/master/assets/screenshoots/09.png" width="200">   
+
+
+<img src="https://github.com/eivanphils/flutter-shoe-design/blob/master/assets/screenshoots/10.png" width="200">   
 
