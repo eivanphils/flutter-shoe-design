@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
 import 'package:flutter_shop_nike/models/shoe_info.dart';
+import 'package:flutter_shop_nike/providers/store_provider.dart';
 import 'package:flutter_shop_nike/screens/nike_store/nike_product_detail_screen.dart';
 import 'package:flutter_shop_nike/widgets/widgets.dart';
 
@@ -12,6 +14,8 @@ class CardShoes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final StoreProvider storeProvider = Provider.of<StoreProvider>(context);
+
     final String cover =
         'assets/images/store/${product.slug}/${product.colors[0].colorName}/cover.webp';
 
@@ -49,12 +53,16 @@ class CardShoes extends StatelessWidget {
               right: 20,
               bottom: 20,
               child: ButtonOutline(
-                  onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => NikeProductDetailScreen(
-                                product: product,
-                              ))),
+                  onPressed: () {
+                    storeProvider.cover = '';
+
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => NikeProductDetailScreen(
+                                  product: product,
+                                )));
+                  },
                   child: const FaIcon(
                     FontAwesomeIcons.arrowRight,
                   ))),

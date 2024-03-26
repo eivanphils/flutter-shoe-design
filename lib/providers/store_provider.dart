@@ -9,6 +9,16 @@ class StoreProvider extends ChangeNotifier {
   List<ShoeInfo> storeProducts = [];
   late ColorInfo _selectedColor;
 
+  String _cover = '';
+
+  String get cover => _cover;
+  set cover(String value) {
+    _cover = value;
+    if(_cover.length > 1) {
+      notifyListeners();
+    }
+  }
+
   set selectedSize(double size) {
     _selectedSize = size;
     notifyListeners();
@@ -28,9 +38,7 @@ class StoreProvider extends ChangeNotifier {
   }
 
   Future<void> loadData() async {
- 
-    final String response =
-        await rootBundle.loadString('assets/data.json');
+    final String response = await rootBundle.loadString('assets/data.json');
 
     storeProducts = shoesDataFromJson(response).items;
 

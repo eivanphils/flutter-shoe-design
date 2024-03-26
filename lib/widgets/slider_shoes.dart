@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
+import 'package:flutter_shop_nike/screens/nike_store/nike_product_detail_screen.dart';
 import 'package:flutter_shop_nike/models/shoe_info.dart';
 import 'package:flutter_shop_nike/widgets/widgets.dart';
 import 'package:flutter_shop_nike/providers/store_provider.dart';
@@ -65,7 +66,7 @@ class _Slide extends StatelessWidget {
             ),
           ),
         ),
-        const Positioned(left: 10, bottom: 40, child: _Button()),
+        Positioned(left: 10, bottom: 40, child: _Button(product: product)),
         Positioned(
           right: 20,
           bottom: 0,
@@ -80,17 +81,31 @@ class _Slide extends StatelessWidget {
 }
 
 class _Button extends StatelessWidget {
-  const _Button();
+    final ShoeInfo product;
+
+  const _Button({required this.product});
 
   @override
   Widget build(BuildContext context) {
+    final StoreProvider storeProvider = Provider.of<StoreProvider>(context);
+
     return ElevatedButton(
         style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)))),
-        onPressed: () {},
+        onPressed: () {
+
+                    storeProvider.cover = '';
+
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => NikeProductDetailScreen(
+                                  product: product,
+                                )));
+        },
         child: const Text(
           'Shop now',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),

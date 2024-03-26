@@ -4,7 +4,9 @@ class ShoeImage extends StatelessWidget {
   final String image;
   final double width;
   const ShoeImage({
-    super.key, required this.image, required this.width,
+    super.key,
+    required this.image,
+    required this.width,
   });
 
   @override
