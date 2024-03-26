@@ -93,6 +93,11 @@ Luego el directorio lib
 <img src="https://github.com/eivanphils/flutter-shoe-design/blob/master/assets/screenshoots/08.png" width="200">   
 
 
-
 <img src="https://github.com/eivanphils/flutter-shoe-design/blob/master/assets/screenshoots/09.png" width="200">   
+
+
+
+
+https://github.com/eivanphils/flutter-shoe-design/assets/1909869/ef012763-9574-4f7b-b10e-17a0633fdfa5
+
 
