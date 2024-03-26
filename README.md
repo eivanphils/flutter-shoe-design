@@ -19,10 +19,6 @@ Luego abre el archivo main.dart y presiona F5 o fn + F5 app. 
 
 [https://docs.flutter.dev/get-started/install](https://docs.flutter.dev/get-started/install)
 
-## Herramientas externas
-
-Se utiliza el api de [https://www.edamam.com](https://www.edamam.com) para obtener recetas.
-
 
 ## Paquetes de terceros
 
